@@ -21,11 +21,15 @@ TEST_CASE("Arquivo inexistente") {
 TEST_CASE("Arquivo existente deve abrir com sucesso") {
     REQUIRE_NOTHROW(abrir_arquivo("exemplo.txt"));
 }
-// Testa a abertura de um arquivo vazio 3
+// Testa a abertura de um arquivo vazio 
 TEST_CASE("Arquivo vazio deve abrir com sucesso") {
     REQUIRE_NOTHROW(abrir_arquivo("arquivo_vazio.txt"));
 }
-// Testando a leitura de um arquivo que não existe 6
+// Testando a leitura de um arquivo que não existe 
 TEST_CASE("Leitura de Arquivo inexistente") {
     REQUIRE_THROWS_AS(ler_arquivo("nao.txt"), const std::ios_base::failure&);
+}
+//Testando a funcao para ler um arquivo qualquer 
+TEST_CASE("Teste da funcao de ler o conteudo de um arquivo") {
+    REQUIRE_NOTHROW(ler_arquivo("exemploqualquer.txt"));
 }
