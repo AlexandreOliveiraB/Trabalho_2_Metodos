@@ -32,5 +32,11 @@ std::string ler_arquivo(const std::string& nome_arquivo) {
     return conteudo.str(); // Retorna o conteúdo do arquivo como string
 }
 std::vector<std::string> separar_palavras(const std::string& texto) {
-    return {};
+    std::vector<std::string> palavras;
+    std::istringstream stream(texto);
+    std::string palavra;
+    while (stream >> palavra) {
+        palavras.push_back(palavra);
+    }
+    return palavras;
 }
