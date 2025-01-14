@@ -14,4 +14,5 @@
 
 void abrir_arquivo(const std::string& nome_arquivo);
 std::string ler_arquivo(const std::string& nome_arquivo);
+std::vector<std::string> separar_palavras(const std::string& texto);
 #endif  // CONTA_PALAVRAS_HPP_

@@ -39,7 +39,7 @@ TEST_CASE("Teste de leitura de conteudo de arquivo ja existente") {
         std::string conteudo = ler_arquivo(nome_arquivo);
          REQUIRE(conteudo == "exemplo.\n"); // O conteúdo deve ser o mesmo
 }
-//Testando a funcao para ler um arquivo criado pelo proprio programa 5
+//Testando a funcao para ler um arquivo criado pelo proprio programa 
 TEST_CASE("Teste de leitura de conteudo de arquivo criado do zero") { 
         //Criando um arquivo de teste com conteudo
         std::ofstream arquivo("exemplocriado.txt");
@@ -50,4 +50,9 @@ TEST_CASE("Teste de leitura de conteudo de arquivo criado do zero") {
         // Verificando o conteúdo lido
         std::string conteudo = ler_arquivo("exemplocriado.txt");
         REQUIRE(conteudo == "Conteudo do arquivo de teste.\n"); // O conteúdo deve ser o mesmo
+}
+TEST_CASE("Separação de palavras por espaço", "[separar_palavras]") { 
+    std::string texto = "Esta é uma frase de teste.";
+    std::vector<std::string> resultado_esperado = {"Esta", "é", "uma", "frase", "de", "teste."};
+    REQUIRE(separar_palavras(texto) == resultado_esperado);
 }

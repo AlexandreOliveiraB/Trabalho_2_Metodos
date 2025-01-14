@@ -21,17 +21,16 @@ void abrir_arquivo(const std::string& nome_arquivo) {
         throw std::ios_base::failure("Nao foi possivel abrir o arquivo.");
     }
 }
-
 std::string ler_arquivo(const std::string& nome_arquivo) {
     std::ifstream arquivo(nome_arquivo);
-    
     // Se não conseguir abrir o arquivo, lança uma exceção
     if (!arquivo.is_open()) {
         throw std::ios_base::failure("Não foi possível abrir o arquivo.");
     }
-
     std::stringstream conteudo;
     conteudo << arquivo.rdbuf(); // Lê todo o conteúdo do arquivo
-
     return conteudo.str(); // Retorna o conteúdo do arquivo como string
+}
+std::vector<std::string> separar_palavras(const std::string& texto) {
+    return {};
 }
