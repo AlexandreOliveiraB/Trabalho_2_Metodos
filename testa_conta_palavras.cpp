@@ -33,3 +33,9 @@ TEST_CASE("Leitura de Arquivo inexistente") {
 TEST_CASE("Teste da funcao de ler o conteudo de um arquivo") {
     REQUIRE_NOTHROW(ler_arquivo("exemploqualquer.txt"));
 }
+//Testando a leitura de um arquivo que existe no diretorio 
+TEST_CASE("Teste de leitura de conteudo de arquivo ja existente") {
+        const std::string nome_arquivo = "exemplo.txt";
+        std::string conteudo = ler_arquivo(nome_arquivo);
+         REQUIRE(conteudo == "exemplo.\n"); // O conteúdo deve ser o mesmo
+}
