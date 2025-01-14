@@ -23,5 +23,5 @@ TEST_CASE("Arquivo existente deve abrir com sucesso") {
 }
 // Testa a abertura de um arquivo vazio 3
 TEST_CASE("Arquivo vazio deve abrir com sucesso") {
-    REQUIRE_NOTHROW(abrir_arquivo("arquivo_vazios.txt"));
+    REQUIRE_NOTHROW(abrir_arquivo("arquivo_vazio.txt"));
 }
