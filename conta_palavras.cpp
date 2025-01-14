@@ -47,13 +47,5 @@ std::map<std::string, int> contar_palavras(const std::string& texto) {
     while (stream >> palavra) {
         contagem[palavra]++;
     }
-    return {
-        {"Esta", 2},
-        {"é", 2},
-        {"uma", 2},
-        {"frase", 2},
-        {"de", 2},
-        {"teste.", 1},
-        {"Teste.", 1}
-    };;
+    return contagem;
 }
