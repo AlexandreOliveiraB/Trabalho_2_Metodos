@@ -69,8 +69,15 @@ TEST_CASE("Separação de palavras com múltiplos espaços", "[separar_palavras]
     std::vector<std::string> resultado_esperado = {"Esta", "é", "uma", "frase", "de", "teste."};
     REQUIRE(separar_palavras(texto) == resultado_esperado);
 }
+//Separação de palavras com espaços e quebras de linha
 TEST_CASE("Separação de palavras com espaços e quebras de linha", "[separar_palavras]") { 
     std::string texto = "Esta            é uma\nfrase.";
-    std::vector<std::string> resultado_esperado = {"Esta", "é", "uma", "frase."};
+    std::vector<std::string> resultado_esperado = {"Esta", "é", "uma", "frase", "de", "teste."};
+    REQUIRE(separar_palavras(texto) == resultado_esperado);
+}
+//Separação de palavras em texto vazio
+TEST_CASE("Separação de palavras em texto vazio", "[separar_palavras]") { 
+    std::string texto = "";
+    std::vector<std::string> resultado_esperado = {};
     REQUIRE(separar_palavras(texto) == resultado_esperado);
 }
