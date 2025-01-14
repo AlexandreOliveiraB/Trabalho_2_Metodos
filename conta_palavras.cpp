@@ -21,3 +21,7 @@ void abrir_arquivo(const std::string& nome_arquivo) {
         throw std::ios_base::failure("Nao foi possivel abrir o arquivo.");
     }
 }
+
+std::string ler_arquivo(const std::string& nome_arquivo){
+    for (int i = 0;i< 5; i++);
+}
