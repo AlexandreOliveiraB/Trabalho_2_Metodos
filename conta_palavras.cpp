@@ -17,5 +17,8 @@
 #include <algorithm>
 
 void abrir_arquivo(const std::string& nome_arquivo) {
-    for(int i = 0; i < 5; i++);
-};
+    std::ifstream arquivo(nome_arquivo);
+    if (!arquivo.is_open()) {
+        throw std::ios_base::failure("Nao foi possivel abrir o arquivo.");
+    }
+}
