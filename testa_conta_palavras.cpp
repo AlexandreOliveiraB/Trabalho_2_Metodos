@@ -95,3 +95,9 @@ TEST_CASE("Contagem de palavras diferentes (case-sensitive)", "[contar_palavras]
     };
     REQUIRE(contar_palavras(texto) == resultado_esperado);
 }
+//Contagem de palavras em texto vazio
+TEST_CASE("Contagem de palavras em texto vazio", "[contar_palavras]") {
+    std::string texto = "";
+    std::map<std::string, int> resultado_esperado = {};
+   REQUIRE(contar_palavras(texto) == resultado_esperado);
+}
