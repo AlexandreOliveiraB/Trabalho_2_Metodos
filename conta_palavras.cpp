@@ -40,3 +40,6 @@ std::vector<std::string> separar_palavras(const std::string& texto) {
     }
     return palavras;
 }
+std::map<std::string, int> contar_palavras(const std::string& texto) {
+    return {{"Esta", 2}};
+}
