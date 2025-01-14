@@ -71,7 +71,7 @@ TEST_CASE("Separação de palavras com múltiplos espaços", "[separar_palavras]
 }
 //Separação de palavras com espaços e quebras de linha
 TEST_CASE("Separação de palavras com espaços e quebras de linha", "[separar_palavras]") { 
-    std::string texto = "Esta            é uma\nfrase.";
+    std::string texto = "Esta            é uma\nfrase de teste.";
     std::vector<std::string> resultado_esperado = {"Esta", "é", "uma", "frase", "de", "teste."};
     REQUIRE(separar_palavras(texto) == resultado_esperado);
 }
