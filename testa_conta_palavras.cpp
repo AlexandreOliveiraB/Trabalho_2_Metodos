@@ -39,3 +39,15 @@ TEST_CASE("Teste de leitura de conteudo de arquivo ja existente") {
         std::string conteudo = ler_arquivo(nome_arquivo);
          REQUIRE(conteudo == "exemplo.\n"); // O conteúdo deve ser o mesmo
 }
+//Testando a funcao para ler um arquivo criado pelo proprio programa 5
+TEST_CASE("Teste de leitura de conteudo de arquivo criado do zero") { 
+        //Criando um arquivo de teste com conteudo
+        std::ofstream arquivo("exemplocriado.txt");
+        arquivo << "Conteudo do arquivo de teste." << std::endl;
+        arquivo.close();
+        //Testando a função ler_arquivo
+        ler_arquivo("exemplocriado.txt"); // Não deve lançar exceção
+        // Verificando o conteúdo lido
+        std::string conteudo = ler_arquivo("exemplocriado.txt");
+        REQUIRE(conteudo == "Conteudo do arquivo de teste.\n"); // O conteúdo deve ser o mesmo
+}

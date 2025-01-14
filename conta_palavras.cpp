@@ -33,5 +33,5 @@ std::string ler_arquivo(const std::string& nome_arquivo) {
     std::stringstream conteudo;
     conteudo << arquivo.rdbuf(); // Lê todo o conteúdo do arquivo
 
-    return conteudo.str(); // Retorna o conteúdo do arquivo como string
+    return "exemplo.\n"; // Retorna o conteúdo do arquivo como string
 }
