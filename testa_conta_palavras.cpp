@@ -51,34 +51,38 @@ TEST_CASE("Teste de leitura de conteudo de arquivo criado do zero") {
         std::string conteudo = ler_arquivo("exemplocriado.txt");
         REQUIRE(conteudo == "Conteudo do arquivo de teste.\n"); // O conteúdo deve ser o mesmo
 }
-//Separação de palavras por espaço
+// Separação de palavras por espaço
 TEST_CASE("Separação de palavras por espaço", "[separar_palavras]") { 
-    std::string texto = "Esta é uma frase de teste.";
-    std::vector<std::string> resultado_esperado = {"Esta", "é", "uma", "frase", "de", "teste."};
+    std::wstring texto = L"Esta é uma frase de teste.";
+    std::vector<std::wstring> resultado_esperado = {L"Esta", L"é", L"uma", L"frase", L"de", L"teste."};
     REQUIRE(separar_palavras(texto) == resultado_esperado);
 }
-//Separação de palavras por quebra de linha
+
+// Separação de palavras por quebra de linha
 TEST_CASE("Separação de palavras por quebra de linha", "[separar_palavras]") { 
-    std::string texto = "Esta é uma\nfrase de teste.";
-    std::vector<std::string> resultado_esperado = {"Esta", "é", "uma", "frase", "de", "teste."};
+    std::wstring texto = L"Esta é uma\nfrase de teste.";
+    std::vector<std::wstring> resultado_esperado = {L"Esta", L"é", L"uma", L"frase", L"de", L"teste."};
     REQUIRE(separar_palavras(texto) == resultado_esperado);
 }
-//Separação de palavras com múltiplos espaços
+
+// Separação de palavras com múltiplos espaços
 TEST_CASE("Separação de palavras com múltiplos espaços", "[separar_palavras]") { 
-    std::string texto = "Esta  é   uma    frase    de        teste.";
-    std::vector<std::string> resultado_esperado = {"Esta", "é", "uma", "frase", "de", "teste."};
+    std::wstring texto = L"Esta  é   uma    frase    de        teste.";
+    std::vector<std::wstring> resultado_esperado = {L"Esta", L"é", L"uma", L"frase", L"de", L"teste."};
     REQUIRE(separar_palavras(texto) == resultado_esperado);
 }
-//Separação de palavras com espaços e quebras de linha
+
+// Separação de palavras com espaços e quebras de linha
 TEST_CASE("Separação de palavras com espaços e quebras de linha", "[separar_palavras]") { 
-    std::string texto = "Esta            é uma\nfrase de teste.";
-    std::vector<std::string> resultado_esperado = {"Esta", "é", "uma", "frase", "de", "teste."};
+    std::wstring texto = L"Esta            é uma\nfrase de teste.";
+    std::vector<std::wstring> resultado_esperado = {L"Esta", L"é", L"uma", L"frase", L"de", L"teste."};
     REQUIRE(separar_palavras(texto) == resultado_esperado);
 }
-//Separação de palavras em texto vazio
+
+// Separação de palavras em texto vazio
 TEST_CASE("Separação de palavras em texto vazio", "[separar_palavras]") { 
-    std::string texto = "";
-    std::vector<std::string> resultado_esperado = {};
+    std::wstring texto = L"";
+    std::vector<std::wstring> resultado_esperado = {};
     REQUIRE(separar_palavras(texto) == resultado_esperado);
 }
 //Contagem de palavras diferentes

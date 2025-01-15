@@ -20,7 +20,7 @@ test: testa_conta_palavras
 	./testa_conta_palavras
 	
 cpplint: testa_conta_palavras.cpp   conta_palavras.cpp conta_palavras.hpp
-	cpplint   --exclude=catch.hpp  *.*
+	python cpplint.py --exclude=catch.hpp testa_conta_palavras.cpp conta_palavras.cpp conta_palavras.hpp
 	
 gcov: testa_conta_palavras.cpp   conta_palavras.cpp conta_palavras.hpp 
 	g++ -std=c++11 -Wall -fprofile-arcs -ftest-coverage -c conta_palavras.cpp
