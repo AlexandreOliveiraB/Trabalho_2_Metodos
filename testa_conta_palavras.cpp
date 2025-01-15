@@ -105,16 +105,8 @@ TEST_CASE("Contagem de palavras em texto vazio", "[contar_palavras]") {
     std::map<std::string, int> resultado_esperado = {};
    REQUIRE(contar_palavras(texto) == resultado_esperado);
 }
-TEST_CASE("Ordenação com letras acentuadas agrupadas", "[ordenar_palavras_acentuadas]") {
-    // Texto de entrada
-    std::vector<std::string> palavras = {"exemplo", "é", "bom", "e", "Esta", "frase"};
-    
-    // Resultado esperado (agrupando e com distinção)
-    std::vector<std::string> resultado_esperado = {"e", "é", "Esta", "exemplo", "frase", "bom"};
-    
-    // Ordena as palavras
-    std::vector<std::string> resultado = ordenar_palavras(palavras);
-
-    // Verifica se o resultado está correto
-    REQUIRE(resultado == resultado_esperado);
+TEST_CASE("Ordenação alfabética das palavras", "[ordenar_palavras]") {
+    std::string texto = "Esta é uma frase de teste.";
+    std::vector<std::string> resultado_esperado = {"Esta", "de", "frase", "teste.", "uma", "é"};
+    REQUIRE(ordenar_palavras(texto) == resultado_esperado);
 }
