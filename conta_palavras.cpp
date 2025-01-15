@@ -15,6 +15,7 @@
 #include <map>
 #include <algorithm>
 #include <locale>
+#include <codecvt>
 #include "catch.hpp"
 void abrir_arquivo(const std::string& nome_arquivo) {
     std::ifstream arquivo(nome_arquivo);
@@ -22,9 +23,9 @@ void abrir_arquivo(const std::string& nome_arquivo) {
         throw std::ios_base::failure("Nao foi possivel abrir o arquivo.");
     }
 }
+// Função para ler o arquivo
 std::string ler_arquivo(const std::string& nome_arquivo) {
     std::ifstream arquivo(nome_arquivo);
-    // Se não conseguir abrir o arquivo, lança uma exceção
     if (!arquivo.is_open()) {
         throw std::ios_base::failure("Não foi possível abrir o arquivo.");
     }
