@@ -19,4 +19,5 @@ std::string ler_arquivo(const std::string& nome_arquivo);
 std::vector<std::wstring> separar_palavras(const std::wstring& texto);
 std::map<std::wstring, int> contar_palavras(const std::wstring& texto);
 std::vector<std::wstring> ordenar_palavras(const std::map<std::wstring, int>& contagem);
+std::wstring remover_acentos(const std::wstring& palavra);
 #endif  // CONTA_PALAVRAS_HPP_
