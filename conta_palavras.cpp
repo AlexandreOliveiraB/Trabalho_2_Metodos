@@ -14,6 +14,7 @@
 #include <sstream>
 #include <map>
 #include <algorithm>
+#include <locale>
 #include "catch.hpp"
 void abrir_arquivo(const std::string& nome_arquivo) {
     std::ifstream arquivo(nome_arquivo);
@@ -31,16 +32,6 @@ std::string ler_arquivo(const std::string& nome_arquivo) {
     conteudo << arquivo.rdbuf(); // Lê todo o conteúdo do arquivo
     return conteudo.str(); // Retorna o conteúdo do arquivo como string
 }
-/*
-std::vector<std::string> separar_palavras(const std::string& texto) {
-    std::vector<std::string> palavras;
-    std::istringstream stream(texto);
-    std::string palavra;
-    while (stream >> palavra) {
-        palavras.push_back(palavra);
-    }
-    return palavras;
-}*/
 std::vector<std::wstring> separar_palavras(const std::wstring& texto) {
     std::vector<std::wstring> palavras;
     std::wstring palavra;
@@ -60,4 +51,7 @@ std::map<std::string, int> contar_palavras(const std::string& texto) {
         contagem[palavra]++;
     }
     return contagem;
+}
+std::vector<std::string> ordenar_palavras(const std::vector<std::string>& palavras) {
+    return {};
 }
