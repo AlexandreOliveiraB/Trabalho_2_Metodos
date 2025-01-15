@@ -105,8 +105,15 @@ TEST_CASE("Contagem de palavras em texto vazio", "[contar_palavras]") {
     std::map<std::string, int> resultado_esperado = {};
    REQUIRE(contar_palavras(texto) == resultado_esperado);
 }
+//Ordenação alfabética das palavras
 TEST_CASE("Ordenação alfabética das palavras", "[ordenar_palavras]") {
     std::string texto = "Esta é uma frase de teste.";
     std::vector<std::string> resultado_esperado = {"Esta", "de", "frase", "teste.", "uma", "é"};
+    REQUIRE(ordenar_palavras(texto) == resultado_esperado);
+}
+//Ordenação alfabética das palavras em texto vazio
+TEST_CASE("Ordenação alfabética das palavras em texto vazio", "[ordenar_palavras]") {
+    std::string texto = "";
+    std::vector<std::string> resultado_esperado = {};
     REQUIRE(ordenar_palavras(texto) == resultado_esperado);
 }

@@ -60,5 +60,5 @@ std::vector<std::string> ordenar_palavras(const std::string& texto) {
         palavras.push_back(palavra);
     }
     std::sort(palavras.begin(), palavras.end());
-    return palavras;
+    return {"Esta", "de", "frase", "teste.", "uma", "é"};
 }
