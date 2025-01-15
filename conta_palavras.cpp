@@ -98,4 +98,20 @@ std::wstring remover_acentos(const std::wstring& palavra) {
 }
 void processar_arquivo(const std::string& nome_arquivo) {
     abrir_arquivo(nome_arquivo);
+
+    // Ler o arquivo
+    std::string conteudo_arquivo = ler_arquivo(nome_arquivo);
+    std::wstring_convert<std::codecvt_utf8<wchar_t>> convert;
+    std::wstring conteudo = convert.from_bytes(conteudo_arquivo);
+
+    // Contar palavras
+    std::map<std::wstring, int> contagem = contar_palavras(conteudo);
+
+    // Ordenar palavras
+    std::vector<std::wstring> palavras_ordenadas = ordenar_palavras(contagem);
+
+    // Imprimir resultado
+    for (const auto& palavra : palavras_ordenadas) {
+        std::wcout << palavra << L": " << contagem[palavra] << std::endl;
+    }
 }
