@@ -105,15 +105,19 @@ TEST_CASE("Contagem de palavras em texto vazio", "[contar_palavras]") {
     std::map<std::wstring, int> resultado_esperado = {};
    REQUIRE(contar_palavras(texto) == resultado_esperado);
 }
-//Ordenação alfabética das palavras
-TEST_CASE("Ordenação alfabética das palavras", "[ordenar_palavras]") {
-    std::string texto = "Esta é uma frase de teste.";
-    std::vector<std::string> resultado_esperado = {"Esta", "de", "frase", "teste.", "uma", "é"};
-    REQUIRE(ordenar_palavras(texto) == resultado_esperado);
+TEST_CASE("Ordenar palavras - ordenação comum", "[ordenar_palavras]") {
+    std::map<std::wstring, int> contagem = {
+        {L"banana", 1},
+        {L"abacaxi", 1},
+        {L"laranja", 1}
+    };
+    std::vector<std::wstring> resultado = ordenar_palavras(contagem);
+    std::vector<std::wstring> esperado = {L"abacaxi", L"banana", L"laranja"};
+    REQUIRE_THAT(resultado, Catch::Matchers::Equals(esperado));
 }
-//Ordenação alfabética das palavras em texto vazio
-TEST_CASE("Ordenação alfabética das palavras em texto vazio", "[ordenar_palavras]") {
-    std::string texto = "";
-    std::vector<std::string> resultado_esperado = {};
-    REQUIRE(ordenar_palavras(texto) == resultado_esperado);
+
+TEST_CASE("Ordenar palavras - entrada vazia", "[ordenar_palavras]") {
+    std::map<std::wstring, int> contagem;
+    std::vector<std::wstring> resultado = ordenar_palavras(contagem);
+    REQUIRE(resultado.empty());
 }

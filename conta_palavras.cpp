@@ -52,12 +52,10 @@ std::map<std::wstring, int> contar_palavras(const std::wstring& texto) {
     }
     return contagem;
 }
-std::vector<std::string> ordenar_palavras(const std::string& texto) {
-    std::vector<std::string> palavras;
-    std::istringstream stream(texto);
-    std::string palavra;
-    while (stream >> palavra) {
-        palavras.push_back(palavra);
+std::vector<std::wstring> ordenar_palavras(const std::map<std::wstring, int>& contagem) {
+    std::vector<std::wstring> palavras;
+    for (const auto& par : contagem) {
+        palavras.push_back(par.first);
     }
     std::sort(palavras.begin(), palavras.end());
     return palavras;
