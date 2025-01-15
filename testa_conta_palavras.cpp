@@ -87,22 +87,22 @@ TEST_CASE("Separação de palavras em texto vazio", "[separar_palavras]") {
 }
 //Contagem de palavras diferentes
 TEST_CASE("Contagem de palavras diferentes (case-sensitive)", "[contar_palavras]") { 
-    std::string texto = "Esta é uma frase de teste. Esta é uma frase de Teste.";
-    std::map<std::string, int> resultado_esperado = {
-        {"Esta", 2},
-        {"é", 2},
-        {"uma", 2},
-        {"frase", 2},
-        {"de", 2},
-        {"teste.", 1},
-        {"Teste.", 1}
+    std::wstring texto = L"Esta é uma frase de teste. Esta é uma frase de Teste.";
+    std::map<std::wstring, int> resultado_esperado = {
+        {L"Esta", 2},
+        {L"é", 2},
+        {L"uma", 2},
+        {L"frase", 2},
+        {L"de", 2},
+        {L"teste.", 1},
+        {L"Teste.", 1}
     };
     REQUIRE(contar_palavras(texto) == resultado_esperado);
 }
 //Contagem de palavras em texto vazio
 TEST_CASE("Contagem de palavras em texto vazio", "[contar_palavras]") {
-    std::string texto = "";
-    std::map<std::string, int> resultado_esperado = {};
+    std::wstring texto = L"";
+    std::map<std::wstring, int> resultado_esperado = {};
    REQUIRE(contar_palavras(texto) == resultado_esperado);
 }
 //Ordenação alfabética das palavras

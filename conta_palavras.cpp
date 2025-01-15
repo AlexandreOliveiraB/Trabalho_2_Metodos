@@ -23,7 +23,6 @@ void abrir_arquivo(const std::string& nome_arquivo) {
         throw std::ios_base::failure("Nao foi possivel abrir o arquivo.");
     }
 }
-// Função para ler o arquivo
 std::string ler_arquivo(const std::string& nome_arquivo) {
     std::ifstream arquivo(nome_arquivo);
     if (!arquivo.is_open()) {
@@ -44,10 +43,10 @@ std::vector<std::wstring> separar_palavras(const std::wstring& texto) {
     
     return palavras;
 }
-std::map<std::string, int> contar_palavras(const std::string& texto) {
-    std::map<std::string, int> contagem;
-    std::istringstream stream(texto);
-    std::string palavra;
+std::map<std::wstring, int> contar_palavras(const std::wstring& texto) {
+    std::map<std::wstring, int> contagem;
+    std::wstringstream stream(texto);
+    std::wstring palavra;
     while (stream >> palavra) {
         contagem[palavra]++;
     }
