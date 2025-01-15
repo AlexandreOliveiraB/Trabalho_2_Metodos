@@ -85,17 +85,15 @@ TEST_CASE("Separação de palavras em texto vazio", "[separar_palavras]") {
     std::vector<std::wstring> resultado_esperado = {};
     REQUIRE(separar_palavras(texto) == resultado_esperado);
 }
-//Contagem de palavras diferentes
-TEST_CASE("Contagem de palavras diferentes (case-sensitive)", "[contar_palavras]") { 
+TEST_CASE("Contagem de palavras diferentes (case-insensitive)", "[contar_palavras]") { 
     std::wstring texto = L"Esta é uma frase de teste. Esta é uma frase de Teste.";
     std::map<std::wstring, int> resultado_esperado = {
-        {L"Esta", 2},
+        {L"esta", 2},
         {L"é", 2},
         {L"uma", 2},
         {L"frase", 2},
         {L"de", 2},
-        {L"teste.", 1},
-        {L"Teste.", 1}
+        {L"teste.", 2}
     };
     REQUIRE(contar_palavras(texto) == resultado_esperado);
 }
@@ -120,4 +118,34 @@ TEST_CASE("Ordenar palavras - entrada vazia", "[ordenar_palavras]") {
     std::map<std::wstring, int> contagem;
     std::vector<std::wstring> resultado = ordenar_palavras(contagem);
     REQUIRE(resultado.empty());
+}
+TEST_CASE("Testa funções de contagem e ordenação de palavras com leitura de arquivo existente e case-insensitive") {
+    std::locale::global(std::locale("en_US.UTF-8"));
+
+    const std::string nome_arquivo = "arquivo.txt";
+
+    SECTION("Leitura e processamento de um arquivo simples") {
+        // Configurar a saída para capturar std::wcout
+        std::wstringstream saida_capturada;
+        std::wstreambuf* cout_buffer_original = std::wcout.rdbuf(); // Salvar buffer original
+        std::wcout.rdbuf(saida_capturada.rdbuf()); // Redirecionar std::wcout para o stringstream
+
+        // Processar o arquivo
+        processar_arquivo(nome_arquivo);
+
+        // Restaurar o buffer original de std::wcout
+        std::wcout.rdbuf(cout_buffer_original);
+
+        // Verificar saída capturada
+        std::wstring resultado_esperado = 
+            L"é: 1\n"
+            L"este: 1\n"
+            L"o: 1\n"
+            L"que: 1\n"
+            L"será: 1\n"
+            L"texto: 2\n"
+            L"utilizado: 1\n";
+
+        REQUIRE(saida_capturada.str() == resultado_esperado);
+    }
 }

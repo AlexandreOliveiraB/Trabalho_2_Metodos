@@ -49,6 +49,8 @@ std::map<std::wstring, int> contar_palavras(const std::wstring& texto) {
     std::wstringstream stream(texto);
     std::wstring palavra;
     while (stream >> palavra) {
+        // Converter para minúsculas
+        std::transform(palavra.begin(), palavra.end(), palavra.begin(), ::towlower);
         contagem[palavra]++;
     }
     return contagem;
@@ -93,4 +95,7 @@ std::wstring remover_acentos(const std::wstring& palavra) {
         palavra_sem_acento += c;
     }
     return palavra_sem_acento;
+}
+void processar_arquivo(const std::string& nome_arquivo) {
+    abrir_arquivo(nome_arquivo);
 }
