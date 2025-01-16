@@ -1,0 +1,276 @@
+\doxysection{conta\+\_\+palavras.\+hpp File Reference}
+\hypertarget{conta__palavras_8hpp}{}\label{conta__palavras_8hpp}\index{conta\_palavras.hpp@{conta\_palavras.hpp}}
+
+
+Definições das funções para contar e ordenar palavras de um arquivo.  
+
+
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$stdexcept$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$locale$>$}\newline
+{\ttfamily \#include $<$codecvt$>$}\newline
+Include dependency graph for conta\+\_\+palavras.\+hpp\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{conta__palavras_8hpp_a6162eed1af4e1a6d4536db45d5be7d72}{abrir\+\_\+arquivo}} (const std\+::string \&nome\+\_\+arquivo)
+\begin{DoxyCompactList}\small\item\em Função para abrir um arquivo. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{conta__palavras_8hpp_a3d98f8f72a0f66fde011475d025149fc}{ler\+\_\+arquivo}} (const std\+::string \&nome\+\_\+arquivo)
+\begin{DoxyCompactList}\small\item\em Função para ler o conteúdo de um arquivo. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::wstring $>$ \mbox{\hyperlink{conta__palavras_8hpp_ab9ecb65beb8eb50e46dc548f311ff193}{separar\+\_\+palavras}} (const std\+::wstring \&texto)
+\begin{DoxyCompactList}\small\item\em Função para separar o texto em palavras. \end{DoxyCompactList}\item 
+std\+::map$<$ std\+::wstring, int $>$ \mbox{\hyperlink{conta__palavras_8hpp_aa640843ba2e1bf232a8a8ca4c8158a63}{contar\+\_\+palavras}} (const std\+::wstring \&texto)
+\begin{DoxyCompactList}\small\item\em Função para contar as ocorrências de cada palavra no texto. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::wstring $>$ \mbox{\hyperlink{conta__palavras_8hpp_a9f6c25467a2b3633adfef9626cca684b}{ordenar\+\_\+palavras}} (const std\+::map$<$ std\+::wstring, int $>$ \&contagem)
+\begin{DoxyCompactList}\small\item\em Função para ordenar as palavras por ordem alfabética, desconsiderando os acentos. \end{DoxyCompactList}\item 
+std\+::wstring \mbox{\hyperlink{conta__palavras_8hpp_a4eb56a6fd2d29bdf3e4cb37859e2e1bd}{remover\+\_\+acentos}} (const std\+::wstring \&palavra)
+\begin{DoxyCompactList}\small\item\em Função para remover os acentos de uma palavra. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{conta__palavras_8hpp_aea5bd6827f1f9592e3b661003dffd87c}{processar\+\_\+arquivo}} (const std\+::string \&nome\+\_\+arquivo)
+\begin{DoxyCompactList}\small\item\em Função para processar o conteúdo de um arquivo e exibir a contagem das palavras ordenadas. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Definições das funções para contar e ordenar palavras de um arquivo. 
+
+Este arquivo contém as declarações das funções que permitem abrir, ler e processar um arquivo de texto, contar as palavras presentes no arquivo e ordená-\/las por ordem alfabética, desconsiderando acentos.
+
+\begin{DoxyCopyright}{Copyright}
+2025 Alexandre 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{conta__palavras_8hpp_a6162eed1af4e1a6d4536db45d5be7d72}\label{conta__palavras_8hpp_a6162eed1af4e1a6d4536db45d5be7d72} 
+\index{conta\_palavras.hpp@{conta\_palavras.hpp}!abrir\_arquivo@{abrir\_arquivo}}
+\index{abrir\_arquivo@{abrir\_arquivo}!conta\_palavras.hpp@{conta\_palavras.hpp}}
+\doxysubsubsection{\texorpdfstring{abrir\_arquivo()}{abrir\_arquivo()}}
+{\footnotesize\ttfamily void abrir\+\_\+arquivo (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{nome\+\_\+arquivo }\end{DoxyParamCaption})}
+
+
+
+Função para abrir um arquivo. 
+
+Tenta abrir o arquivo especificado pelo nome. Caso o arquivo não possa ser aberto, uma exceção será lançada.
+
+
+\begin{DoxyParams}{Parameters}
+{\em nome\+\_\+arquivo} & O nome do arquivo a ser aberto. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::ios\+\_\+base\+::failure} & Se o arquivo não puder ser aberto.\\
+\hline
+\end{DoxyExceptions}
+Esta função tenta abrir o arquivo especificado pelo nome. Se o arquivo não puder ser aberto, uma exceção será lançada.
+
+
+\begin{DoxyParams}{Parameters}
+{\em nome\+\_\+arquivo} & O nome do arquivo a ser aberto. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::ios\+\_\+base\+::failure} & Se o arquivo não puder ser aberto. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{conta__palavras_8hpp_aa640843ba2e1bf232a8a8ca4c8158a63}\label{conta__palavras_8hpp_aa640843ba2e1bf232a8a8ca4c8158a63} 
+\index{conta\_palavras.hpp@{conta\_palavras.hpp}!contar\_palavras@{contar\_palavras}}
+\index{contar\_palavras@{contar\_palavras}!conta\_palavras.hpp@{conta\_palavras.hpp}}
+\doxysubsubsection{\texorpdfstring{contar\_palavras()}{contar\_palavras()}}
+{\footnotesize\ttfamily std\+::map$<$ std\+::wstring, int $>$ contar\+\_\+palavras (\begin{DoxyParamCaption}\item[{const std\+::wstring \&}]{texto }\end{DoxyParamCaption})}
+
+
+
+Função para contar as ocorrências de cada palavra no texto. 
+
+Conta as ocorrências de cada palavra no texto, convertendo-\/as para minúsculas e armazenando as contagens em um mapa.
+
+
+\begin{DoxyParams}{Parameters}
+{\em texto} & O texto onde as palavras serão contadas. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Um mapa contendo as palavras e suas respectivas contagens.
+\end{DoxyReturn}
+Função para contar as ocorrências de cada palavra no texto.
+
+Esta função percorre o texto, converte as palavras para minúsculas e conta as ocorrências de cada palavra, armazenando em um mapa.
+
+
+\begin{DoxyParams}{Parameters}
+{\em texto} & O texto no qual as palavras serão contadas. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Um mapa onde as chaves são as palavras e os valores são suas respectivas contagens. 
+\end{DoxyReturn}
+\Hypertarget{conta__palavras_8hpp_a3d98f8f72a0f66fde011475d025149fc}\label{conta__palavras_8hpp_a3d98f8f72a0f66fde011475d025149fc} 
+\index{conta\_palavras.hpp@{conta\_palavras.hpp}!ler\_arquivo@{ler\_arquivo}}
+\index{ler\_arquivo@{ler\_arquivo}!conta\_palavras.hpp@{conta\_palavras.hpp}}
+\doxysubsubsection{\texorpdfstring{ler\_arquivo()}{ler\_arquivo()}}
+{\footnotesize\ttfamily std\+::string ler\+\_\+arquivo (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{nome\+\_\+arquivo }\end{DoxyParamCaption})}
+
+
+
+Função para ler o conteúdo de um arquivo. 
+
+Lê todo o conteúdo de um arquivo e retorna como uma string.
+
+
+\begin{DoxyParams}{Parameters}
+{\em nome\+\_\+arquivo} & O nome do arquivo a ser lido. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Uma string contendo o conteúdo do arquivo. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::ios\+\_\+base\+::failure} & Se o arquivo não puder ser aberto.\\
+\hline
+\end{DoxyExceptions}
+Esta função lê todo o conteúdo de um arquivo e retorna como uma string.
+
+
+\begin{DoxyParams}{Parameters}
+{\em nome\+\_\+arquivo} & O nome do arquivo a ser lido. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Uma string contendo o conteúdo do arquivo. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::ios\+\_\+base\+::failure} & Se o arquivo não puder ser aberto. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{conta__palavras_8hpp_a9f6c25467a2b3633adfef9626cca684b}\label{conta__palavras_8hpp_a9f6c25467a2b3633adfef9626cca684b} 
+\index{conta\_palavras.hpp@{conta\_palavras.hpp}!ordenar\_palavras@{ordenar\_palavras}}
+\index{ordenar\_palavras@{ordenar\_palavras}!conta\_palavras.hpp@{conta\_palavras.hpp}}
+\doxysubsubsection{\texorpdfstring{ordenar\_palavras()}{ordenar\_palavras()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::wstring $>$ ordenar\+\_\+palavras (\begin{DoxyParamCaption}\item[{const std\+::map$<$ std\+::wstring, int $>$ \&}]{contagem }\end{DoxyParamCaption})}
+
+
+
+Função para ordenar as palavras por ordem alfabética, desconsiderando os acentos. 
+
+Ordena as palavras de acordo com suas versões sem acento, mas preservando as palavras originais.
+
+
+\begin{DoxyParams}{Parameters}
+{\em contagem} & O mapa contendo as palavras e suas contagens. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Um vetor com as palavras ordenadas sem considerar acentos.
+\end{DoxyReturn}
+Função para ordenar as palavras por ordem alfabética, desconsiderando os acentos.
+
+Esta função ordena as palavras de acordo com a versão sem acento de cada uma, mas preserva as palavras originais.
+
+
+\begin{DoxyParams}{Parameters}
+{\em contagem} & O mapa que contém as palavras e suas contagens. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Um vetor com as palavras ordenadas de acordo com a versão sem acento. 
+\end{DoxyReturn}
+\Hypertarget{conta__palavras_8hpp_aea5bd6827f1f9592e3b661003dffd87c}\label{conta__palavras_8hpp_aea5bd6827f1f9592e3b661003dffd87c} 
+\index{conta\_palavras.hpp@{conta\_palavras.hpp}!processar\_arquivo@{processar\_arquivo}}
+\index{processar\_arquivo@{processar\_arquivo}!conta\_palavras.hpp@{conta\_palavras.hpp}}
+\doxysubsubsection{\texorpdfstring{processar\_arquivo()}{processar\_arquivo()}}
+{\footnotesize\ttfamily void processar\+\_\+arquivo (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{nome\+\_\+arquivo }\end{DoxyParamCaption})}
+
+
+
+Função para processar o conteúdo de um arquivo e exibir a contagem das palavras ordenadas. 
+
+Abre o arquivo, lê seu conteúdo, conta as palavras, ordena-\/as e exibe as palavras ordenadas com suas respectivas contagens.
+
+
+\begin{DoxyParams}{Parameters}
+{\em nome\+\_\+arquivo} & O nome do arquivo a ser processado.\\
+\hline
+\end{DoxyParams}
+Função para processar o conteúdo de um arquivo e exibir a contagem das palavras ordenadas.
+
+Esta função abre o arquivo, lê seu conteúdo, conta as palavras e as ordena. Por fim, imprime as palavras e suas respectivas contagens.
+
+
+\begin{DoxyParams}{Parameters}
+{\em nome\+\_\+arquivo} & O nome do arquivo a ser processado. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{conta__palavras_8hpp_a4eb56a6fd2d29bdf3e4cb37859e2e1bd}\label{conta__palavras_8hpp_a4eb56a6fd2d29bdf3e4cb37859e2e1bd} 
+\index{conta\_palavras.hpp@{conta\_palavras.hpp}!remover\_acentos@{remover\_acentos}}
+\index{remover\_acentos@{remover\_acentos}!conta\_palavras.hpp@{conta\_palavras.hpp}}
+\doxysubsubsection{\texorpdfstring{remover\_acentos()}{remover\_acentos()}}
+{\footnotesize\ttfamily std\+::wstring remover\+\_\+acentos (\begin{DoxyParamCaption}\item[{const std\+::wstring \&}]{palavra }\end{DoxyParamCaption})}
+
+
+
+Função para remover os acentos de uma palavra. 
+
+Remove os acentos das letras de uma palavra, substituindo por suas versões sem acento.
+
+
+\begin{DoxyParams}{Parameters}
+{\em palavra} & A palavra da qual os acentos serão removidos. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A palavra sem acento.
+\end{DoxyReturn}
+Função para remover os acentos de uma palavra.
+
+Esta função remove os acentos das letras de uma palavra, substituindo por suas versões sem acento.
+
+
+\begin{DoxyParams}{Parameters}
+{\em palavra} & A palavra da qual os acentos serão removidos. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A palavra sem acento. 
+\end{DoxyReturn}
+\Hypertarget{conta__palavras_8hpp_ab9ecb65beb8eb50e46dc548f311ff193}\label{conta__palavras_8hpp_ab9ecb65beb8eb50e46dc548f311ff193} 
+\index{conta\_palavras.hpp@{conta\_palavras.hpp}!separar\_palavras@{separar\_palavras}}
+\index{separar\_palavras@{separar\_palavras}!conta\_palavras.hpp@{conta\_palavras.hpp}}
+\doxysubsubsection{\texorpdfstring{separar\_palavras()}{separar\_palavras()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::wstring $>$ separar\+\_\+palavras (\begin{DoxyParamCaption}\item[{const std\+::wstring \&}]{texto }\end{DoxyParamCaption})}
+
+
+
+Função para separar o texto em palavras. 
+
+Divide o texto em palavras usando espaços como delimitadores e retorna um vetor com as palavras.
+
+
+\begin{DoxyParams}{Parameters}
+{\em texto} & O texto a ser separado em palavras. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Um vetor de palavras (strings) extraídas do texto.
+\end{DoxyReturn}
+Esta função divide o texto em palavras usando espaços como delimitadores.
+
+
+\begin{DoxyParams}{Parameters}
+{\em texto} & O texto a ser separado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Um vetor de palavras (strings) extraídas do texto. 
+\end{DoxyReturn}

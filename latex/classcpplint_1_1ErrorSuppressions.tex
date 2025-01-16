@@ -1,0 +1,112 @@
+\doxysection{cpplint.\+Error\+Suppressions Class Reference}
+\hypertarget{classcpplint_1_1ErrorSuppressions}{}\label{classcpplint_1_1ErrorSuppressions}\index{cpplint.ErrorSuppressions@{cpplint.ErrorSuppressions}}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classcpplint_1_1ErrorSuppressions_1_1LineRange}{Line\+Range}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classcpplint_1_1ErrorSuppressions_a2c8e8b3ce1b9cf15aa3b51b67b3d4553}\label{classcpplint_1_1ErrorSuppressions_a2c8e8b3ce1b9cf15aa3b51b67b3d4553} 
+{\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self)
+\item 
+\mbox{\hyperlink{classcpplint_1_1ErrorSuppressions_a2773f3be3d70f616231d1889d4b8f9ae}{Get\+Open\+Block\+Start}} (self)
+\item 
+\mbox{\hyperlink{classcpplint_1_1ErrorSuppressions_a3d22ef7ba8fe5e89eda23b95741ade6a}{Add\+Global\+Suppression}} (self, category)
+\item 
+\mbox{\hyperlink{classcpplint_1_1ErrorSuppressions_a6792187e951085e99454900e2d852b21}{Add\+Line\+Suppression}} (self, category, linenum)
+\item 
+\mbox{\hyperlink{classcpplint_1_1ErrorSuppressions_a636a0ef0492283ddbd7e5123468c4dec}{Start\+Block\+Suppression}} (self, category, linenum)
+\item 
+\mbox{\hyperlink{classcpplint_1_1ErrorSuppressions_a29409c09099f5d6775ac91c3037754e6}{End\+Block\+Suppression}} (self, linenum)
+\item 
+\mbox{\hyperlink{classcpplint_1_1ErrorSuppressions_a6b79cb7e7c315ab468159d662ed8a516}{Is\+Suppressed}} (self, category, linenum)
+\item 
+\mbox{\hyperlink{classcpplint_1_1ErrorSuppressions_a0bd8dce0f1573e27241a7b88dffdba2b}{Has\+Open\+Block}} (self)
+\item 
+\mbox{\hyperlink{classcpplint_1_1ErrorSuppressions_a5a746b0afbe24326fc9004ee93f73844}{Clear}} (self)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classcpplint_1_1ErrorSuppressions_a214d22303cbc8fca8e152b1063136983}\label{classcpplint_1_1ErrorSuppressions_a214d22303cbc8fca8e152b1063136983} 
+{\bfseries \+\_\+\+Add\+Suppression} (self, category, line\+\_\+range)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classcpplint_1_1ErrorSuppressions_a2406a0a4d92cd978131df9bba524de37}\label{classcpplint_1_1ErrorSuppressions_a2406a0a4d92cd978131df9bba524de37} 
+{\bfseries \+\_\+suppressions}
+\item 
+\Hypertarget{classcpplint_1_1ErrorSuppressions_a960e2ef81a6a64fe08326cc226d5fd7b}\label{classcpplint_1_1ErrorSuppressions_a960e2ef81a6a64fe08326cc226d5fd7b} 
+{\bfseries \+\_\+open\+\_\+block\+\_\+suppression}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Class to track all error suppressions for cpplint\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcpplint_1_1ErrorSuppressions_a3d22ef7ba8fe5e89eda23b95741ade6a}\label{classcpplint_1_1ErrorSuppressions_a3d22ef7ba8fe5e89eda23b95741ade6a} 
+\index{cpplint.ErrorSuppressions@{cpplint.ErrorSuppressions}!AddGlobalSuppression@{AddGlobalSuppression}}
+\index{AddGlobalSuppression@{AddGlobalSuppression}!cpplint.ErrorSuppressions@{cpplint.ErrorSuppressions}}
+\doxysubsubsection{\texorpdfstring{AddGlobalSuppression()}{AddGlobalSuppression()}}
+{\footnotesize\ttfamily cpplint.\+Error\+Suppressions.\+Add\+Global\+Suppression (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{category }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Add a suppression for `category` which is suppressed for the whole file\end{DoxyVerb}
+ \Hypertarget{classcpplint_1_1ErrorSuppressions_a6792187e951085e99454900e2d852b21}\label{classcpplint_1_1ErrorSuppressions_a6792187e951085e99454900e2d852b21} 
+\index{cpplint.ErrorSuppressions@{cpplint.ErrorSuppressions}!AddLineSuppression@{AddLineSuppression}}
+\index{AddLineSuppression@{AddLineSuppression}!cpplint.ErrorSuppressions@{cpplint.ErrorSuppressions}}
+\doxysubsubsection{\texorpdfstring{AddLineSuppression()}{AddLineSuppression()}}
+{\footnotesize\ttfamily cpplint.\+Error\+Suppressions.\+Add\+Line\+Suppression (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{category,  }\item[{}]{linenum }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Add a suppression for `category` which is suppressed only on `linenum`\end{DoxyVerb}
+ \Hypertarget{classcpplint_1_1ErrorSuppressions_a5a746b0afbe24326fc9004ee93f73844}\label{classcpplint_1_1ErrorSuppressions_a5a746b0afbe24326fc9004ee93f73844} 
+\index{cpplint.ErrorSuppressions@{cpplint.ErrorSuppressions}!Clear@{Clear}}
+\index{Clear@{Clear}!cpplint.ErrorSuppressions@{cpplint.ErrorSuppressions}}
+\doxysubsubsection{\texorpdfstring{Clear()}{Clear()}}
+{\footnotesize\ttfamily cpplint.\+Error\+Suppressions.\+Clear (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Clear all current error suppressions\end{DoxyVerb}
+ \Hypertarget{classcpplint_1_1ErrorSuppressions_a29409c09099f5d6775ac91c3037754e6}\label{classcpplint_1_1ErrorSuppressions_a29409c09099f5d6775ac91c3037754e6} 
+\index{cpplint.ErrorSuppressions@{cpplint.ErrorSuppressions}!EndBlockSuppression@{EndBlockSuppression}}
+\index{EndBlockSuppression@{EndBlockSuppression}!cpplint.ErrorSuppressions@{cpplint.ErrorSuppressions}}
+\doxysubsubsection{\texorpdfstring{EndBlockSuppression()}{EndBlockSuppression()}}
+{\footnotesize\ttfamily cpplint.\+Error\+Suppressions.\+End\+Block\+Suppression (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{linenum }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}End the current block suppression on `linenum`. inclusive\end{DoxyVerb}
+ \Hypertarget{classcpplint_1_1ErrorSuppressions_a2773f3be3d70f616231d1889d4b8f9ae}\label{classcpplint_1_1ErrorSuppressions_a2773f3be3d70f616231d1889d4b8f9ae} 
+\index{cpplint.ErrorSuppressions@{cpplint.ErrorSuppressions}!GetOpenBlockStart@{GetOpenBlockStart}}
+\index{GetOpenBlockStart@{GetOpenBlockStart}!cpplint.ErrorSuppressions@{cpplint.ErrorSuppressions}}
+\doxysubsubsection{\texorpdfstring{GetOpenBlockStart()}{GetOpenBlockStart()}}
+{\footnotesize\ttfamily cpplint.\+Error\+Suppressions.\+Get\+Open\+Block\+Start (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}:return: The start of the current open block or `-1` if there is not an open block\end{DoxyVerb}
+ \Hypertarget{classcpplint_1_1ErrorSuppressions_a0bd8dce0f1573e27241a7b88dffdba2b}\label{classcpplint_1_1ErrorSuppressions_a0bd8dce0f1573e27241a7b88dffdba2b} 
+\index{cpplint.ErrorSuppressions@{cpplint.ErrorSuppressions}!HasOpenBlock@{HasOpenBlock}}
+\index{HasOpenBlock@{HasOpenBlock}!cpplint.ErrorSuppressions@{cpplint.ErrorSuppressions}}
+\doxysubsubsection{\texorpdfstring{HasOpenBlock()}{HasOpenBlock()}}
+{\footnotesize\ttfamily cpplint.\+Error\+Suppressions.\+Has\+Open\+Block (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}:return: `True` if a block suppression was started but not ended\end{DoxyVerb}
+ \Hypertarget{classcpplint_1_1ErrorSuppressions_a6b79cb7e7c315ab468159d662ed8a516}\label{classcpplint_1_1ErrorSuppressions_a6b79cb7e7c315ab468159d662ed8a516} 
+\index{cpplint.ErrorSuppressions@{cpplint.ErrorSuppressions}!IsSuppressed@{IsSuppressed}}
+\index{IsSuppressed@{IsSuppressed}!cpplint.ErrorSuppressions@{cpplint.ErrorSuppressions}}
+\doxysubsubsection{\texorpdfstring{IsSuppressed()}{IsSuppressed()}}
+{\footnotesize\ttfamily cpplint.\+Error\+Suppressions.\+Is\+Suppressed (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{category,  }\item[{}]{linenum }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}:return: `True` if `category` is suppressed for `linenum`\end{DoxyVerb}
+ \Hypertarget{classcpplint_1_1ErrorSuppressions_a636a0ef0492283ddbd7e5123468c4dec}\label{classcpplint_1_1ErrorSuppressions_a636a0ef0492283ddbd7e5123468c4dec} 
+\index{cpplint.ErrorSuppressions@{cpplint.ErrorSuppressions}!StartBlockSuppression@{StartBlockSuppression}}
+\index{StartBlockSuppression@{StartBlockSuppression}!cpplint.ErrorSuppressions@{cpplint.ErrorSuppressions}}
+\doxysubsubsection{\texorpdfstring{StartBlockSuppression()}{StartBlockSuppression()}}
+{\footnotesize\ttfamily cpplint.\+Error\+Suppressions.\+Start\+Block\+Suppression (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{category,  }\item[{}]{linenum }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Start a suppression block for `category` on `linenum`. inclusive\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+cpplint.\+py\end{DoxyCompactItemize}

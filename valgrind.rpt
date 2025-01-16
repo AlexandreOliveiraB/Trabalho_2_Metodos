@@ -1,0 +1,36 @@
+==13798== Memcheck, a memory error detector
+==13798== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==13798== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==13798== Command: ./testa_conta_palavras
+==13798== Parent PID: 13797
+==13798== 
+==13798== 
+==13798== HEAP SUMMARY:
+==13798==     in use at exit: 12,204 bytes in 116 blocks
+==13798==   total heap usage: 2,538 allocs, 2,422 frees, 348,440 bytes allocated
+==13798== 
+==13798== 46 bytes in 1 blocks are definitely lost in loss record 83 of 116
+==13798==    at 0x484DB80: realloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==13798==    by 0x4BC45E2: argz_add_sep (argz-addsep.c:34)
+==13798==    by 0x4B4DBDB: newlocale (newlocale.c:111)
+==13798==    by 0x49469D9: std::locale::facet::_S_create_c_locale(__locale_struct*&, char const*, __locale_struct*) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+==13798==    by 0x4951BF9: std::locale::_Impl::_Impl(char const*, unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+==13798==    by 0x49527B0: std::locale::locale(char const*) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+==13798==    by 0x12D285: ____C_A_T_C_H____T_E_S_T____32() (in /home/Ale/Documents/trabalho_metodos_2/Trabalho_2_Metodos/testa_conta_palavras)
+==13798==    by 0x13F1B3: Catch::FreeFunctionTestCase::invoke() const (in /home/Ale/Documents/trabalho_metodos_2/Trabalho_2_Metodos/testa_conta_palavras)
+==13798==    by 0x123196: Catch::TestCase::invoke() const (in /home/Ale/Documents/trabalho_metodos_2/Trabalho_2_Metodos/testa_conta_palavras)
+==13798==    by 0x13DBDE: Catch::RunContext::invokeActiveTestCase() (in /home/Ale/Documents/trabalho_metodos_2/Trabalho_2_Metodos/testa_conta_palavras)
+==13798==    by 0x13D92D: Catch::RunContext::runCurrentTest(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (in /home/Ale/Documents/trabalho_metodos_2/Trabalho_2_Metodos/testa_conta_palavras)
+==13798==    by 0x13C45B: Catch::RunContext::runTest(Catch::TestCase const&) (in /home/Ale/Documents/trabalho_metodos_2/Trabalho_2_Metodos/testa_conta_palavras)
+==13798== 
+==13798== LEAK SUMMARY:
+==13798==    definitely lost: 46 bytes in 1 blocks
+==13798==    indirectly lost: 0 bytes in 0 blocks
+==13798==      possibly lost: 0 bytes in 0 blocks
+==13798==    still reachable: 12,158 bytes in 115 blocks
+==13798==         suppressed: 0 bytes in 0 blocks
+==13798== Reachable blocks (those to which a pointer was found) are not shown.
+==13798== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==13798== 
+==13798== For lists of detected and suppressed errors, rerun with: -s
+==13798== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)

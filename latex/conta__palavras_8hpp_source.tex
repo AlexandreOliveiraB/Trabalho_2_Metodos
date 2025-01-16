@@ -1,0 +1,34 @@
+\doxysection{conta\+\_\+palavras.\+hpp}
+\hypertarget{conta__palavras_8hpp_source}{}\label{conta__palavras_8hpp_source}\mbox{\hyperlink{conta__palavras_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#ifndef\ CONTA\_PALAVRAS\_HPP\_}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ CONTA\_PALAVRAS\_HPP\_}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <stdexcept>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <sstream>}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ <locale>}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ <codecvt>}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00033\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{conta__palavras_8hpp_a6162eed1af4e1a6d4536db45d5be7d72}{abrir\_arquivo}}(\textcolor{keyword}{const}\ std::string\&\ nome\_arquivo);}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00044\ std::string\ \mbox{\hyperlink{conta__palavras_8hpp_a3d98f8f72a0f66fde011475d025149fc}{ler\_arquivo}}(\textcolor{keyword}{const}\ std::string\&\ nome\_arquivo);}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00054\ std::vector<std::wstring>\ \mbox{\hyperlink{conta__palavras_8hpp_ab9ecb65beb8eb50e46dc548f311ff193}{separar\_palavras}}(\textcolor{keyword}{const}\ std::wstring\&\ texto);}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00065\ std::map<std::wstring,\ int>\ \mbox{\hyperlink{conta__palavras_8hpp_aa640843ba2e1bf232a8a8ca4c8158a63}{contar\_palavras}}(\textcolor{keyword}{const}\ std::wstring\&\ texto);}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00075\ std::vector<std::wstring>\ \mbox{\hyperlink{conta__palavras_8hpp_a9f6c25467a2b3633adfef9626cca684b}{ordenar\_palavras}}(\textcolor{keyword}{const}\ std::map<std::wstring,\ int>\&\ contagem);}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00085\ std::wstring\ \mbox{\hyperlink{conta__palavras_8hpp_a4eb56a6fd2d29bdf3e4cb37859e2e1bd}{remover\_acentos}}(\textcolor{keyword}{const}\ std::wstring\&\ palavra);}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00095\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{conta__palavras_8hpp_aea5bd6827f1f9592e3b661003dffd87c}{processar\_arquivo}}(\textcolor{keyword}{const}\ std::string\&\ nome\_arquivo);}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ CONTA\_PALAVRAS\_HPP\_}}
+
+\end{DoxyCode}

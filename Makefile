@@ -20,11 +20,11 @@ test: testa_conta_palavras
 	./testa_conta_palavras
 	
 cpplint: testa_conta_palavras.cpp   conta_palavras.cpp conta_palavras.hpp
-	python cpplint.py --exclude=catch.hpp testa_conta_palavras.cpp conta_palavras.cpp conta_palavras.hpp
+	python3 cpplint.py --exclude=catch.hpp testa_conta_palavras.cpp conta_palavras.cpp conta_palavras.hpp
 	
 gcov: testa_conta_palavras.cpp   conta_palavras.cpp conta_palavras.hpp 
-	g++ -std=c++11 -Wall -fprofile-arcs -ftest-coverage -c conta_palavras.cpp
-	g++ -std=c++11 -Wall -fprofile-arcs -ftest-coverage conta_palavras.o testa_conta_palavras.cpp -o testa_conta_palavras
+	g++ -std=c++11 -Wall -fprofile-arcs -ftest-coverage -c conta_palavras.cpp -lgcov
+	g++ -std=c++11 -Wall -fprofile-arcs -ftest-coverage conta_palavras.o testa_conta_palavras.cpp -o testa_conta_palavras -lgcov
 	./testa_conta_palavras
 	gcov *.cpp	
 	 
@@ -38,11 +38,11 @@ cppcheck: testa_conta_palavras.cpp   conta_palavras.cpp conta_palavras.hpp
 	cppcheck  --enable=warning .
 
 valgrind: testa_conta_palavras
-	valgrind --leak-check=yes --log-file=valgrind.rpt testa_conta_palavras
+	valgrind --leak-check=yes --log-file=valgrind.rpt ./testa_conta_palavras
 
 
 clean:
-#    rm -rf *.o *.exe *.gc* testa_conta_palavras 
-	del /F /Q *.o *.exe *.gc* testa_conta_palavras
+	rm -rf *.o *.exe *.gc* testa_conta_palavras 
+
 	
 	

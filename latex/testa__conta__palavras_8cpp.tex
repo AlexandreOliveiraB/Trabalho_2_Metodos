@@ -1,0 +1,246 @@
+\doxysection{testa\+\_\+conta\+\_\+palavras.\+cpp File Reference}
+\hypertarget{testa__conta__palavras_8cpp}{}\label{testa__conta__palavras_8cpp}\index{testa\_conta\_palavras.cpp@{testa\_conta\_palavras.cpp}}
+
+
+Arquivo de testes para as funções de processamento de palavras.  
+
+
+{\ttfamily \#include "{}conta\+\_\+palavras.\+hpp"{}}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include "{}catch.\+hpp"{}}\newline
+Include dependency graph for testa\+\_\+conta\+\_\+palavras.\+cpp\+:
+% FIG 0
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{testa__conta__palavras_8cpp_a656eb5868e824d59f489f910db438420}\label{testa__conta__palavras_8cpp_a656eb5868e824d59f489f910db438420} 
+\#define {\bfseries CATCH\+\_\+\+CONFIG\+\_\+\+MAIN}
+\begin{DoxyCompactList}\small\item\em Definindo a configuração principal do Catch2 para gerar o main. \end{DoxyCompactList}\item 
+\Hypertarget{testa__conta__palavras_8cpp_ad8c677caeca4e3f1e6b2894fd0906101}\label{testa__conta__palavras_8cpp_ad8c677caeca4e3f1e6b2894fd0906101} 
+\#define {\bfseries CATCH\+\_\+\+CONFIG\+\_\+\+NO\+\_\+\+POSIX\+\_\+\+SIGNALS}
+\begin{DoxyCompactList}\small\item\em Desativa o tratamento de sinais POSIX. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{testa__conta__palavras_8cpp_a467a43d9f53dc38309ed011456cf249b}{TEST\+\_\+\+CASE}} ("{}Arquivo inexistente"{})
+\begin{DoxyCompactList}\small\item\em Testa a abertura de arquivo inexistente. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{testa__conta__palavras_8cpp_a9ae22c2ac7169b1c6e67e4e826e9652d}{TEST\+\_\+\+CASE}} ("{}Arquivo existente deve abrir com sucesso"{})
+\begin{DoxyCompactList}\small\item\em Testa a abertura de arquivo existente. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{testa__conta__palavras_8cpp_aa227e49181d15ad0369e5bc116b04bba}{TEST\+\_\+\+CASE}} ("{}Arquivo vazio deve abrir com sucesso"{})
+\begin{DoxyCompactList}\small\item\em Testa a abertura de um arquivo vazio. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{testa__conta__palavras_8cpp_acbb577231e2197dce69b3e92af2222be}{TEST\+\_\+\+CASE}} ("{}Leitura de Arquivo inexistente"{})
+\begin{DoxyCompactList}\small\item\em Testa a leitura de um arquivo inexistente. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{testa__conta__palavras_8cpp_acb0faa532c4fea664213fc1792c99030}{TEST\+\_\+\+CASE}} ("{}Teste da funcao de ler o conteudo de um arquivo"{})
+\begin{DoxyCompactList}\small\item\em Testa a leitura de um arquivo qualquer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{testa__conta__palavras_8cpp_a00fd568132a93aa9ae57a2363a39c3ad}{TEST\+\_\+\+CASE}} ("{}Teste de leitura de conteudo de arquivo ja existente"{})
+\begin{DoxyCompactList}\small\item\em Testa a leitura de um arquivo existente no diretório. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{testa__conta__palavras_8cpp_a9821bc3414bca7d898970b0d734b1eef}{TEST\+\_\+\+CASE}} ("{}Teste de leitura de conteudo de arquivo criado do zero"{})
+\begin{DoxyCompactList}\small\item\em Testa a leitura de um arquivo criado pelo próprio programa. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{testa__conta__palavras_8cpp_a82276421610d18e098c00f059758f8e6}{TEST\+\_\+\+CASE}} ("{}Separação de palavras por espaço"{}, "{}\mbox{[}separar\+\_\+palavras\mbox{]}"{})
+\begin{DoxyCompactList}\small\item\em Testa a separação de palavras por espaço. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{testa__conta__palavras_8cpp_a4c80b3ac8228347a7964ba5554aad645}{TEST\+\_\+\+CASE}} ("{}Separação de palavras por quebra de linha"{}, "{}\mbox{[}separar\+\_\+palavras\mbox{]}"{})
+\begin{DoxyCompactList}\small\item\em Testa a separação de palavras por quebra de linha. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{testa__conta__palavras_8cpp_a415271a232c9301bb34a7fb99616bd7b}{TEST\+\_\+\+CASE}} ("{}Separação de palavras com múltiplos espaços"{}, "{}\mbox{[}separar\+\_\+palavras\mbox{]}"{})
+\begin{DoxyCompactList}\small\item\em Testa a separação de palavras com múltiplos espaços. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{testa__conta__palavras_8cpp_af85171eb6fca4ba878dd3c3193178c4d}{TEST\+\_\+\+CASE}} ("{}Separação de palavras com espaços e quebras de linha"{}, "{}\mbox{[}separar\+\_\+palavras\mbox{]}"{})
+\begin{DoxyCompactList}\small\item\em Testa a separação de palavras com espaços e quebras de linha. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{testa__conta__palavras_8cpp_adbdee2f271726b53a978b71ea9151a6a}{TEST\+\_\+\+CASE}} ("{}Separação de palavras em texto vazio"{}, "{}\mbox{[}separar\+\_\+palavras\mbox{]}"{})
+\begin{DoxyCompactList}\small\item\em Testa a separação de palavras em texto vazio. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{testa__conta__palavras_8cpp_a1b32cf8f262527a6dbb6c0074e3df9fc}{TEST\+\_\+\+CASE}} ("{}Contagem de palavras diferentes (case-\/insensitive)"{}, "{}\mbox{[}\mbox{\hyperlink{conta__palavras_8cpp_aa640843ba2e1bf232a8a8ca4c8158a63}{contar\+\_\+palavras}}\mbox{]}"{})
+\begin{DoxyCompactList}\small\item\em Testa a contagem de palavras diferentes (case-\/insensitive). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{testa__conta__palavras_8cpp_aa5504257a098f61cd8f30c440dc253c8}{TEST\+\_\+\+CASE}} ("{}Contagem de palavras em texto vazio"{}, "{}\mbox{[}contar\+\_\+palavras\mbox{]}"{})
+\begin{DoxyCompactList}\small\item\em Testa a contagem de palavras em texto vazio. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{testa__conta__palavras_8cpp_a3553e6a4ba936e3948e6a524231d5f55}{TEST\+\_\+\+CASE}} ("{}Ordenar palavras -\/ ordenação comum"{}, "{}\mbox{[}ordenar\+\_\+palavras\mbox{]}"{})
+\begin{DoxyCompactList}\small\item\em Testa a ordenação de palavras. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{testa__conta__palavras_8cpp_aca4e5cca931d6b1546eb4578cfab2842}{TEST\+\_\+\+CASE}} ("{}Ordenar palavras -\/ entrada vazia"{}, "{}\mbox{[}ordenar\+\_\+palavras\mbox{]}"{})
+\begin{DoxyCompactList}\small\item\em Testa a ordenação de palavras com entrada vazia. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{testa__conta__palavras_8cpp_af03c8d2d06c2e2168764f3d89260f2d2}{TEST\+\_\+\+CASE}} ("{}Testa funções de contagem e ordenação de palavras com leitura de arquivo existente e case-\/insensitive"{})
+\begin{DoxyCompactList}\small\item\em Testa as funções de contagem e ordenação de palavras com leitura de arquivo existente. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Arquivo de testes para as funções de processamento de palavras. 
+
+Este arquivo contém os testes das funções do programa {\ttfamily \doxylink{conta__palavras_8cpp}{conta\+\_\+palavras.\+cpp}}. Ele utiliza o framework Catch2 para testar as funcionalidades como abertura de arquivos, leitura de conteúdo, separação de palavras, contagem de palavras, e ordenação das palavras.
+
+\begin{DoxyCopyright}{Copyright}
+2025 Alexandre 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{testa__conta__palavras_8cpp_a9ae22c2ac7169b1c6e67e4e826e9652d}\label{testa__conta__palavras_8cpp_a9ae22c2ac7169b1c6e67e4e826e9652d} 
+\index{testa\_conta\_palavras.cpp@{testa\_conta\_palavras.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!testa\_conta\_palavras.cpp@{testa\_conta\_palavras.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [1/17]}}
+{\footnotesize\ttfamily TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Arquivo existente deve abrir com sucesso"{}}]{ }\end{DoxyParamCaption})}
+
+
+
+Testa a abertura de arquivo existente. 
+
+Verifica se a função {\ttfamily abrir\+\_\+arquivo} não lança exceções ao tentar abrir um arquivo existente. \Hypertarget{testa__conta__palavras_8cpp_a467a43d9f53dc38309ed011456cf249b}\label{testa__conta__palavras_8cpp_a467a43d9f53dc38309ed011456cf249b} 
+\index{testa\_conta\_palavras.cpp@{testa\_conta\_palavras.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!testa\_conta\_palavras.cpp@{testa\_conta\_palavras.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [2/17]}}
+{\footnotesize\ttfamily TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Arquivo inexistente"{}}]{ }\end{DoxyParamCaption})}
+
+
+
+Testa a abertura de arquivo inexistente. 
+
+Verifica se a função {\ttfamily abrir\+\_\+arquivo} lança uma exceção quando o arquivo não existe. \Hypertarget{testa__conta__palavras_8cpp_aa227e49181d15ad0369e5bc116b04bba}\label{testa__conta__palavras_8cpp_aa227e49181d15ad0369e5bc116b04bba} 
+\index{testa\_conta\_palavras.cpp@{testa\_conta\_palavras.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!testa\_conta\_palavras.cpp@{testa\_conta\_palavras.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [3/17]}}
+{\footnotesize\ttfamily TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Arquivo vazio deve abrir com sucesso"{}}]{ }\end{DoxyParamCaption})}
+
+
+
+Testa a abertura de um arquivo vazio. 
+
+Verifica se a função {\ttfamily abrir\+\_\+arquivo} não lança exceções ao tentar abrir um arquivo vazio. \Hypertarget{testa__conta__palavras_8cpp_a1b32cf8f262527a6dbb6c0074e3df9fc}\label{testa__conta__palavras_8cpp_a1b32cf8f262527a6dbb6c0074e3df9fc} 
+\index{testa\_conta\_palavras.cpp@{testa\_conta\_palavras.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!testa\_conta\_palavras.cpp@{testa\_conta\_palavras.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [4/17]}}
+{\footnotesize\ttfamily TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Contagem de palavras diferentes (case-\/insensitive)"{}}]{,  }\item[{"{}"{}}]{\mbox{[}contar\+\_\+palavras\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Testa a contagem de palavras diferentes (case-\/insensitive). 
+
+Verifica se a função {\ttfamily contar\+\_\+palavras} conta as palavras corretamente, independentemente de maiúsculas ou minúsculas. \Hypertarget{testa__conta__palavras_8cpp_aa5504257a098f61cd8f30c440dc253c8}\label{testa__conta__palavras_8cpp_aa5504257a098f61cd8f30c440dc253c8} 
+\index{testa\_conta\_palavras.cpp@{testa\_conta\_palavras.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!testa\_conta\_palavras.cpp@{testa\_conta\_palavras.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [5/17]}}
+{\footnotesize\ttfamily TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Contagem de palavras em texto vazio"{}}]{,  }\item[{"{}"{}}]{\mbox{[}contar\+\_\+palavras\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Testa a contagem de palavras em texto vazio. 
+
+Verifica se a função {\ttfamily contar\+\_\+palavras} retorna um mapa vazio quando o texto está vazio. \Hypertarget{testa__conta__palavras_8cpp_acbb577231e2197dce69b3e92af2222be}\label{testa__conta__palavras_8cpp_acbb577231e2197dce69b3e92af2222be} 
+\index{testa\_conta\_palavras.cpp@{testa\_conta\_palavras.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!testa\_conta\_palavras.cpp@{testa\_conta\_palavras.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [6/17]}}
+{\footnotesize\ttfamily TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Leitura de Arquivo inexistente"{}}]{ }\end{DoxyParamCaption})}
+
+
+
+Testa a leitura de um arquivo inexistente. 
+
+Verifica se a função {\ttfamily ler\+\_\+arquivo} lança uma exceção quando o arquivo não existe. \Hypertarget{testa__conta__palavras_8cpp_aca4e5cca931d6b1546eb4578cfab2842}\label{testa__conta__palavras_8cpp_aca4e5cca931d6b1546eb4578cfab2842} 
+\index{testa\_conta\_palavras.cpp@{testa\_conta\_palavras.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!testa\_conta\_palavras.cpp@{testa\_conta\_palavras.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [7/17]}}
+{\footnotesize\ttfamily TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Ordenar palavras -\/ entrada vazia"{}}]{,  }\item[{"{}"{}}]{\mbox{[}ordenar\+\_\+palavras\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Testa a ordenação de palavras com entrada vazia. 
+
+Verifica se a função {\ttfamily ordenar\+\_\+palavras} lida corretamente com um mapa vazio. \Hypertarget{testa__conta__palavras_8cpp_a3553e6a4ba936e3948e6a524231d5f55}\label{testa__conta__palavras_8cpp_a3553e6a4ba936e3948e6a524231d5f55} 
+\index{testa\_conta\_palavras.cpp@{testa\_conta\_palavras.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!testa\_conta\_palavras.cpp@{testa\_conta\_palavras.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [8/17]}}
+{\footnotesize\ttfamily TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Ordenar palavras -\/ ordenação comum"{}}]{,  }\item[{"{}"{}}]{\mbox{[}ordenar\+\_\+palavras\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Testa a ordenação de palavras. 
+
+Verifica se a função {\ttfamily ordenar\+\_\+palavras} ordena corretamente um conjunto de palavras. \Hypertarget{testa__conta__palavras_8cpp_af85171eb6fca4ba878dd3c3193178c4d}\label{testa__conta__palavras_8cpp_af85171eb6fca4ba878dd3c3193178c4d} 
+\index{testa\_conta\_palavras.cpp@{testa\_conta\_palavras.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!testa\_conta\_palavras.cpp@{testa\_conta\_palavras.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [9/17]}}
+{\footnotesize\ttfamily TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Separação de palavras com espaços e quebras de linha"{}}]{,  }\item[{"{}"{}}]{\mbox{[}separar\+\_\+palavras\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Testa a separação de palavras com espaços e quebras de linha. 
+
+Verifica se a função {\ttfamily separar\+\_\+palavras} lida corretamente com espaços e quebras de linha simultaneamente. \Hypertarget{testa__conta__palavras_8cpp_a415271a232c9301bb34a7fb99616bd7b}\label{testa__conta__palavras_8cpp_a415271a232c9301bb34a7fb99616bd7b} 
+\index{testa\_conta\_palavras.cpp@{testa\_conta\_palavras.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!testa\_conta\_palavras.cpp@{testa\_conta\_palavras.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [10/17]}}
+{\footnotesize\ttfamily TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Separação de palavras com múltiplos espaços"{}}]{,  }\item[{"{}"{}}]{\mbox{[}separar\+\_\+palavras\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Testa a separação de palavras com múltiplos espaços. 
+
+Verifica se a função {\ttfamily separar\+\_\+palavras} lida corretamente com múltiplos espaços consecutivos. \Hypertarget{testa__conta__palavras_8cpp_adbdee2f271726b53a978b71ea9151a6a}\label{testa__conta__palavras_8cpp_adbdee2f271726b53a978b71ea9151a6a} 
+\index{testa\_conta\_palavras.cpp@{testa\_conta\_palavras.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!testa\_conta\_palavras.cpp@{testa\_conta\_palavras.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [11/17]}}
+{\footnotesize\ttfamily TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Separação de palavras em texto vazio"{}}]{,  }\item[{"{}"{}}]{\mbox{[}separar\+\_\+palavras\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Testa a separação de palavras em texto vazio. 
+
+Verifica se a função {\ttfamily separar\+\_\+palavras} retorna um vetor vazio quando o texto está vazio. \Hypertarget{testa__conta__palavras_8cpp_a82276421610d18e098c00f059758f8e6}\label{testa__conta__palavras_8cpp_a82276421610d18e098c00f059758f8e6} 
+\index{testa\_conta\_palavras.cpp@{testa\_conta\_palavras.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!testa\_conta\_palavras.cpp@{testa\_conta\_palavras.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [12/17]}}
+{\footnotesize\ttfamily TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Separação de palavras por espaço"{}}]{,  }\item[{"{}"{}}]{\mbox{[}separar\+\_\+palavras\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Testa a separação de palavras por espaço. 
+
+Verifica se a função {\ttfamily separar\+\_\+palavras} divide corretamente o texto em palavras separadas por espaços. \Hypertarget{testa__conta__palavras_8cpp_a4c80b3ac8228347a7964ba5554aad645}\label{testa__conta__palavras_8cpp_a4c80b3ac8228347a7964ba5554aad645} 
+\index{testa\_conta\_palavras.cpp@{testa\_conta\_palavras.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!testa\_conta\_palavras.cpp@{testa\_conta\_palavras.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [13/17]}}
+{\footnotesize\ttfamily TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Separação de palavras por quebra de linha"{}}]{,  }\item[{"{}"{}}]{\mbox{[}separar\+\_\+palavras\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Testa a separação de palavras por quebra de linha. 
+
+Verifica se a função {\ttfamily separar\+\_\+palavras} lida corretamente com quebras de linha. \Hypertarget{testa__conta__palavras_8cpp_af03c8d2d06c2e2168764f3d89260f2d2}\label{testa__conta__palavras_8cpp_af03c8d2d06c2e2168764f3d89260f2d2} 
+\index{testa\_conta\_palavras.cpp@{testa\_conta\_palavras.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!testa\_conta\_palavras.cpp@{testa\_conta\_palavras.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [14/17]}}
+{\footnotesize\ttfamily TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Testa funções de contagem e ordenação de palavras com leitura de arquivo existente e case-\/insensitive"{}}]{ }\end{DoxyParamCaption})}
+
+
+
+Testa as funções de contagem e ordenação de palavras com leitura de arquivo existente. 
+
+Verifica se as funções de contagem e ordenação funcionam corretamente com um arquivo existente. \Hypertarget{testa__conta__palavras_8cpp_acb0faa532c4fea664213fc1792c99030}\label{testa__conta__palavras_8cpp_acb0faa532c4fea664213fc1792c99030} 
+\index{testa\_conta\_palavras.cpp@{testa\_conta\_palavras.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!testa\_conta\_palavras.cpp@{testa\_conta\_palavras.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [15/17]}}
+{\footnotesize\ttfamily TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Teste da funcao de ler o conteudo de um arquivo"{}}]{ }\end{DoxyParamCaption})}
+
+
+
+Testa a leitura de um arquivo qualquer. 
+
+Verifica se a função {\ttfamily ler\+\_\+arquivo} não lança exceções ao ler um arquivo existente. \Hypertarget{testa__conta__palavras_8cpp_a9821bc3414bca7d898970b0d734b1eef}\label{testa__conta__palavras_8cpp_a9821bc3414bca7d898970b0d734b1eef} 
+\index{testa\_conta\_palavras.cpp@{testa\_conta\_palavras.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!testa\_conta\_palavras.cpp@{testa\_conta\_palavras.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [16/17]}}
+{\footnotesize\ttfamily TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Teste de leitura de conteudo de arquivo criado do zero"{}}]{ }\end{DoxyParamCaption})}
+
+
+
+Testa a leitura de um arquivo criado pelo próprio programa. 
+
+Testa a função {\ttfamily ler\+\_\+arquivo} ao ler um arquivo recém-\/criado pelo programa. \Hypertarget{testa__conta__palavras_8cpp_a00fd568132a93aa9ae57a2363a39c3ad}\label{testa__conta__palavras_8cpp_a00fd568132a93aa9ae57a2363a39c3ad} 
+\index{testa\_conta\_palavras.cpp@{testa\_conta\_palavras.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!testa\_conta\_palavras.cpp@{testa\_conta\_palavras.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [17/17]}}
+{\footnotesize\ttfamily TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Teste de leitura de conteudo de arquivo ja existente"{}}]{ }\end{DoxyParamCaption})}
+
+
+
+Testa a leitura de um arquivo existente no diretório. 
+
+Verifica se o conteúdo de um arquivo é lido corretamente. 
