@@ -1,0 +1,4 @@
+Eu só rodei os comandos com make, usei linux e o vscode.
+O link para o repositorio no github: https://github.com/AlexandreOliveiraB/Trabalho_2_Metodos
+Eu fiz em dois computadores, então nao sei se nessa pasta .git vai ir todos os commits, mas da para ver todos no github,nesse link que eu mandei.
+Ou rodar um git log, isso vai descrever todos os commits.
